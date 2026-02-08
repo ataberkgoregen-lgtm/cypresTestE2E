@@ -46,7 +46,7 @@ export default function Login() {
   return (
     <Wrapper>
       <Card>
-        <Title>Login</Title>
+        <Title style={{ color: "black" }}>Login</Title>
         <Button onClick={handleLogin}>Giriş Yap</Button>
       </Card>
     </Wrapper>
