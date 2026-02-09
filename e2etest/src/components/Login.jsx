@@ -123,6 +123,7 @@ export default function Login() {
           onChange={handleChange}
           value={form.email}
           invalid={errors.email}
+          data-cy="email"
         />
         {errors.email && <FormFeedback>{errorMessages.email}</FormFeedback>}
       </FormGroup>
@@ -136,6 +137,7 @@ export default function Login() {
           onChange={handleChange}
           value={form.password}
           invalid={errors.password}
+          data-cy="password"
         />
         {errors.password && (
           <FormFeedback>{errorMessages.password}</FormFeedback>
@@ -149,13 +151,14 @@ export default function Login() {
           type="checkbox"
           onChange={handleChange}
           invalid={errors.terms}
+          data-cy="terms"
         />{" "}
         <Label htmlFor="terms" check>
           I agree to terms of service and privacy policy
         </Label>
       </FormGroup>
       <FormGroup className="text-center p-4">
-        <Button color="primary" disabled={!isValid}>
+        <Button data-cy="button" color="primary" disabled={!isValid}>
           Sign In
         </Button>
       </FormGroup>
